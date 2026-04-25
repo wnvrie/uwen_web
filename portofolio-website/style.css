@@ -1,0 +1,245 @@
+/* BODY = FONT ISI */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #f3e8ff, #e9d5ff);
+  text-align: center;
+  padding: 40px;
+  color: #2d1b3d;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: auto;
+  backdrop-filter: blur(10px);
+}
+
+/* JUDUL BESAR */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #7e22ce;
+}
+
+/* JUDUL SECTION */
+h2 {
+  font-family: 'Playfair Display', serif;
+  margin-top: 40px;
+  color: #6b21a8;
+}
+
+/* PARAGRAF */
+p {
+  max-width: 500px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* LIST */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #ffffffcc;
+  margin: 8px auto;
+  padding: 10px;
+  width: 260px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(126, 34, 206, 0.2);
+}
+
+/* INPUT */
+input, textarea {
+  width: 260px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  margin-top: 5px;
+  background: #faf5ff;
+}
+
+/* BUTTON */
+button {
+  background: #7e22ce;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #581c87;
+  transform: scale(1.05);
+}
+
+/* LINE */
+hr {
+  border: none;
+  height: 1px;
+  background: #c084fc;
+  margin: 30px 0;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+h2, p, ul, li, input, textarea {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.7s ease;
+}
+
+.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ===== SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== FLOATING BACKGROUND SPARKLE ===== */
+body::before {
+  content: "✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  color: rgba(126, 34, 206, 0.08);
+  animation: float 20s linear infinite;
+  pointer-events: none;
+  white-space: pre;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-200px); }
+}
+/* ===== CUSTOM CURSOR ===== */
+body {
+  cursor: url("https://cur.cursors-4u.net/anime/ani-12/ani1151.ani"), auto;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+/* ===== PAGE TRANSITION ===== */
+body {
+  opacity: 0;
+  animation: pageIn 0.8s ease forwards;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* optional fade-out class */
+.fade-out {
+  opacity: 0 !important;
+  transition: 0.5s ease;
+}
+
+/* ===== MESSAGE BOX UPGRADE ===== */
+
+#name, #message {
+  transition: 0.3s ease;
+}
+
+#name:focus, #message:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(126, 34, 206, 0.3);
+  transform: scale(1.02);
+}
+
+/* container message section */
+.message-box {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 18px;
+  width: 320px;
+  margin: 20px auto;
+  box-shadow: 0 8px 20px rgba(126, 34, 206, 0.15);
+}
+
+/* output text */
+#output {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #6b21a8;
+  font-weight: 600;
+}
+
+/* ===== CHAT MODE ===== */
+
+.chat-box {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 18px;
+  width: 340px;
+  margin: 20px auto;
+  box-shadow: 0 8px 20px rgba(126, 34, 206, 0.15);
+  text-align: left;
+}
+
+#chat {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding-right: 5px;
+}
+
+/* bubble */
+.bubble {
+  background: #7e22ce;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 14px;
+  margin: 8px 0;
+  width: fit-content;
+  max-width: 80%;
+  font-size: 13px;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* user name */
+.bubble-name {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-bottom: 3px;
+}
+
+/* timestamp */
+.time {
+  font-size: 10px;
+  opacity: 0.6;
+  margin-top: 4px;
+}
+
